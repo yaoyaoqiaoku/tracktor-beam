@@ -1,0 +1,9 @@
+# aruco_tracker.yaml
+aruco_tracker_node:
+  ros__parameters:
+    # ArUco标记参数
+    aruco_id_large: 49             # 大码ID
+    aruco_id_small: 50             # 小码ID
+    dictionary: 7                  # 字典类型，对应DICT_5X5_1000
+    marker_size_large: 0.25         # 大码尺寸（米）
+    marker_size_small: 0.05        # 小码尺寸（米）
