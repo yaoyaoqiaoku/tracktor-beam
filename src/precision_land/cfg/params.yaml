@@ -1,0 +1,23 @@
+precision_land:
+  ros__parameters:
+    # 基本控制参数
+    descent_vel: 0.6               # 下降速度 [m/s]
+    vel_p_gain: 1.5                # 速度控制P增益
+    vel_i_gain: 0.0                # 速度控制I增益
+    max_velocity: 1.5              # 最大水平速度 [m/s]
+    target_timeout: 3.0            # 目标丢失超时时间 [s]
+    delta_position: 0.25           # 位置到达阈值 [m]
+    delta_velocity: 0.25           # 速度到达阈值 [m/s]
+    
+    # 双码参数
+    aruco_id_large: 49             # 大码ID
+    aruco_id_small: 50             # 小码ID
+    height_threshold_switch: 3.0   # 大码切换到小码的高度阈值 [m]
+    small_tag_recover_timeout: 5.0 # 小码丢失后的恢复超时时间 [s]
+    height_threshold_low: 3.0     # 最终精控降落的高度阈值 [m] (建议添加)
+    height_threshold_recover: 3.0 # 小码丢失后回升的高度 [m] (建议添加)
+
+    # 激光高度传感器参数
+    laser_min_valid_distance: 0.02 # 激光最小有效距离 [m]
+    laser_max_valid_distance: 12.0 # 激光最大有效距离 [m] [m]
+    laser_buffer_size: 5           # 激光高度滑动平均窗口大小
